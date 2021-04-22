@@ -2,26 +2,30 @@
   <div class="nav-bar">
     <ul class="nav-list">
       <router-link tag="li" class="nav-list-item active" to="home">
+        <i class="iconfont icon-shouye"></i>
         <span>首页</span>
       </router-link>
       <router-link tag="li" class="nav-list-item" to="category">
+        <i class="iconfont icon-anleimufenlei"></i>
         <span>分类</span>
       </router-link>
       <router-link tag="li" class="nav-list-item" to="cart">
+        <i class="iconfont icon-gouwuche"></i>
         <span>购物车</span>
       </router-link>
       <router-link tag="li" class="nav-list-item" to="user">
+        <i class="iconfont icon-wode"></i>
         <span>我的</span>
       </router-link>
     </ul>
   </div>
 </template>
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="less" scoped>
-@import '../common/style/mixin';
+@import "../common/style/mixin";
 .nav-bar {
   position: fixed;
   left: 0;
