@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import { Toast } from 'vant'
 
-axios.defaults.baseURL = process.env.NODE_ENV == 'development' ? '//121.43.231.185:8080/api/v1' : '//121.43.231.185:8080/api/v1'
+axios.defaults.baseURL = process.env.NODE_ENV == 'development' ? '//localhost:8888/api/v1' : '//localhost:8888/api/v1'
 
 axios.defaults.withCredentials = true
 
