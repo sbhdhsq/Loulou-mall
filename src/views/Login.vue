@@ -143,34 +143,36 @@ export default {
       this.type = v;
     },
     async onSubmit(values) {
-      this.dealTriVer();
+      try {
+        this.dealTriVer();
 
-      if (!this.verify) {
-        Toast.fail("验证码未填或填写错误!");
+        if (!this.verify) {
+          Toast.fail("验证码未填或填写错误!");
 
-        return;
-      }
+          return;
+        }
 
-      if (this.type == "login") {
-        const { data, resultCode } = await login({
-          loginName: values.username,
+        if (this.type == "login") {
+          const { data, resultCode } = await login({
+            loginName: values.username,
 
-          passwordMd5: this.$md5(values.password),
-        });
+            passwordMd5: this.$md5(values.password),
+          });
 
-        setLocal("token", data);
+          setLocal("token", data);
 
-        window.location.href = "/";
-      } else {
-        const { data } = await register({
-          loginName: values.username1,
-          password: values.password1,
-        });
+          window.location.href = "/";
+        } else {
+          const { data } = await register({
+            loginName: values.username1,
+            password: values.password1,
+          });
 
-        Toast.success("注册成功");
+          Toast.success("注册成功");
 
-        this.type = "login";
-      }
+          this.type = "login";
+        }
+      } catch (error) {}
     },
 
     success(obj) {
