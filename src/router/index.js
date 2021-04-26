@@ -49,6 +49,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "detail" */ '../views/AddressEdit.vue'),
     meta: { index: 3 },
   },
+  {
+    path: '/setting',
+    name: 'setting',
+    component: () => import(/* webpackChunkName: "detail" */ '../views/Setting.vue'),
+    meta: { index: 3 },
+  },
 ]
 const router = new VueRouter({ routes })
 export default router
