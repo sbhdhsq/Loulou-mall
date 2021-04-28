@@ -3,7 +3,7 @@
     <s-header :title="'我的'"></s-header>
     <div class="user-info">
       <div class="info">
-        <img src="../assets/01.jpg" />
+        <img :src="user.avatar" />
         <div class="user-desc">
           <span>昵称：{{ user.nickName }}</span>
           <span>登录名：{{ user.loginName }}</span>
@@ -23,7 +23,6 @@
     </van-grid>
   </div>
 </template>
-
 
 <script>
 import sHeader from "@/components/SimpleHeader";
@@ -54,7 +53,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="less" scoped>
 @import "../common/style/mixin";
